@@ -42,33 +42,34 @@ public class Duration
 
         if (hours > 0)
         {
-            result += $"Hours: {hours}, ";
+            result += "Hours: " + hours + ", ";
         }
 
         if (minutes > 0 || hours > 0)
         {
-            result += $"Minutes: {minutes}, ";
+            result += "Minutes: " + minutes + ", ";
         }
 
-        result += $"Seconds: {seconds}";
+        result += "Seconds: " + seconds;
 
         return result;
     }
 }
+
 public class Program
 {
     public static void Main(string[] args)
     {
-        Duration D1 = new Duration(1, 10, 15);
+        Duration D1 = new Duration(5, 20, 40);
         Console.WriteLine(D1.GetString());
         
-        Duration D2 = new Duration(3600);
+        Duration D2 = new Duration(4000);
         Console.WriteLine(D2.GetString());
         
-        Duration D3 = new Duration(7800);
+        Duration D3 = new Duration(8000);
         Console.WriteLine(D3.GetString());
         
-        Duration D4 = new Duration(666);
+        Duration D4 = new Duration(400);
         Console.WriteLine(D4.GetString());
     }
 }
